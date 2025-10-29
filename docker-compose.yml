@@ -1,0 +1,70 @@
+services:
+  asteria-db:
+    image: postgres:15
+    container_name: asteria-db
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${ASTERIA_DB_NAME}
+      POSTGRES_USER: ${ASTERIA_DB_USER}
+      POSTGRES_PASSWORD: ${ASTERIA_DB_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - asteriapgdata:/var/lib/postgresql/data
+    networks:
+      - asteria-network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${ASTERIA_DB_USER} -d ${ASTERIA_DB_NAME}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  asteria-back:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: asteria-back
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      asteria-db:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    networks:
+      - asteria-network
+    environment:
+      DB_HOST: asteria-db
+      DB_PORT: 5432
+      DB_NAME: ${ASTERIA_DB_NAME}
+      DB_USER: ${ASTERIA_DB_USER}
+      DB_PASS: ${ASTERIA_DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    env_file:
+      - .env
+    volumes:
+      - ./pgadmin/servers.json:/pgadmin4/servers.json:ro
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    networks:
+      - asteria-network
+
+volumes:
+  asteriapgdata:
+
+networks:
+  asteria-network:
+    driver: bridge
+    external: false
