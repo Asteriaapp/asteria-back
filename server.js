@@ -6,6 +6,12 @@ const port = process.env.PORT || 3000
 
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors({
+    origin: 'http://localhost:4200',
+    credentials: true
+}));
+
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
