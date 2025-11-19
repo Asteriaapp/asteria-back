@@ -15,7 +15,7 @@ app.use(cors({
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
-const initDb = require('./api/auth/config/initDb');
+const initDb = require('./api/auth/config/initdb');
 
 const authRoutes = require('./api/auth/auth-routes');
 app.use('/api/auth', authRoutes);
