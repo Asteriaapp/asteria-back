@@ -20,9 +20,11 @@ const initDb = require('./config/initdb');
 const authRoutes = require('./api/auth/auth-routes');
 const rulesRoutes = require('./api/rules/rules-routes');
 const contactRoutes = require('./api/contact/contact-routes');
+const shopRoutes = require('./api/shop/shop_routes');
 app.use('/api/auth', authRoutes);
 app.use('/api/rules', rulesRoutes);
 app.use('/api/contact', contactRoutes);
+app.use('/api/shop', shopRoutes);
 
 initDb().then(() => {
     app.listen(port, () => {
