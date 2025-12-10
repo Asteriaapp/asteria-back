@@ -3,6 +3,8 @@ const router = express.Router();
 
 const Contact = require('./models/contact');
 
+
+// POST to create a new contact message
 router.post('/', async (req, res) => {
     try {
         const { name, email, message } = req.body;
@@ -27,6 +29,7 @@ router.post('/', async (req, res) => {
     }
 });
 
+// GET all contact messages
 router.get('/', async (req, res) => {
     try {
         const contacts = await Contact.findAll({
