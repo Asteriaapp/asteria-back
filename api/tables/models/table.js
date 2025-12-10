@@ -21,4 +21,4 @@ const Table = sequelize.define('Table', {
     }
 });
 
-module.exports = Class;
+module.exports = Table;
