@@ -15,10 +15,12 @@ app.use(cors({
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
-const initDb = require('./api/auth/config/initdb');
+const initDb = require('./config/initdb');
 
 const authRoutes = require('./api/auth/auth-routes');
+const rulesRoutes = require('./api/rules/rules-routes');
 app.use('/api/auth', authRoutes);
+app.use('/api/rules', rulesRoutes);
 
 initDb().then(() => {
     app.listen(port, () => {
