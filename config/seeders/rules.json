@@ -1,0 +1,34 @@
+{
+    "Classes": [
+        {
+            "name": "Barbarian",
+            "description": "A fierce warrior of primitive background who can enter a battle rage.",
+            "imageUrl": "https://www.dndbeyond.com/avatars/1/284/637380360698441920.jpeg"
+        },
+        {
+            "name": "Bard",
+            "description": "An inspiring magician whose power echoes the music of creation.",
+            "imageUrl": "https://www.dndbeyond.com/avatars/1/285/637380360701754880.jpeg"
+        },
+        {
+            "name": "Cleric",
+            "description": "A priestly champion who wields divine magic in service of a higher power.",
+            "imageUrl": "https://www.dndbeyond.com/avatars/1/286/637380360705068800.jpeg"
+        }],
+    "Races": [
+        {
+            "name": "Human",
+            "description": "Humans are the most adaptable and ambitious people among the common races. They are the innovators, the achievers, and the pioneers of the worlds.",
+            "imageUrl": "https://www.dndbeyond.com/avatars/1/286/637380360705068800.jpeg"
+        },
+        {
+            "name": "Elf",
+            "description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They live in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light.",
+            "imageUrl": "https://www.dndbeyond.com/avatars/1/287/637380360708382720.jpeg"
+        },
+        {
+            "name": "Dwarf",
+            "description": "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal.",
+            "imageUrl": "https://www.dndbeyond.com/avatars/1/288/637380360711696640.jpeg"
+        }]
+}
