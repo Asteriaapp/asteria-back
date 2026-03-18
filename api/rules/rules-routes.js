@@ -15,4 +15,24 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/classes', async (req, res) => {
+    try {
+        const classes = await Class.findAll();
+        res.json(classes);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({error: 'Internal server error'});
+    }
+});
+
+router.get('/races', async (req, res) => {
+    try {
+        const races = await Race.findAll();
+        res.json(races);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({error: 'Internal server error'});
+    }
+});
+
 module.exports = router;
