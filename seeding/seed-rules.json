@@ -2,26 +2,31 @@
   "classes": [
     {
       "name": "Guerrier",
+      "iconUrl": "/img/class/warrior-icon.png",
       "imageUrl": "/img/class/warrior.png",
       "description": "Un combattant robuste spécialisé dans les armes lourdes et le combat rapproché."
     },
     {
       "name": "Mage",
+      "iconUrl": "/img/class/mage-icon.png",
       "imageUrl": "/img/class/mage.png",
       "description": "Maître des sorts et manipulateur d'énergie magique, capable d'infliger de lourds dégâts à distance."
     },
     {
       "name": "Voleur",
+      "iconUrl": "/img/class/rogue-icon.png",
       "imageUrl": "/img/class/rogue.png",
       "description": "Expert en furtivité et attaques rapides, idéal pour surprendre ses ennemis."
     },
     {
       "name": "Paladin",
+      "iconUrl": "/img/class/paladin-icon.png",
       "imageUrl": "/img/class/paladin.png",
       "description": "Combattant sacré, alliant force physique et magie divine pour protéger ses alliés."
     },
     {
       "name": "Archer",
+      "iconUrl": "/img/class/archer-icon.png",
       "imageUrl": "/img/class/archer.png",
       "description": "Spécialiste du tir à distance et de la précision, capable de frapper ses ennemis avant qu'ils n'approchent."
     }
@@ -30,26 +35,31 @@
   "races": [
     {
       "name": "Humain",
+      "iconUrl": "/img/race/human-icon.png",
       "imageUrl": "/img/race/human.png",
       "description": "Une race polyvalente, capable de s'adapter à toutes les situations et styles de combat."
     },
     {
       "name": "Elfe",
+      "iconUrl": "/img/race/elf-icon.png",
       "imageUrl": "/img/race/elf.png",
       "description": "Agile et élégant, fortement lié à la magie et à la nature."
     },
     {
       "name": "Orc",
+      "iconUrl": "/img/race/orc-icon.png",
       "imageUrl": "/img/race/orc.png",
       "description": "Puissants et résistants, souvent spécialisés dans le combat rapproché."
     },
     {
       "name": "Nain",
+      "iconUrl": "/img/race/dwarf-icon.png",
       "imageUrl": "/img/race/dwarf.png",
       "description": "Petits mais robustes, excellents artisans et guerriers défensifs."
     },
     {
       "name": "Gobelin",
+      "iconUrl": "/img/race/goblin-icon.png",
       "imageUrl": "/img/race/goblin.png",
       "description": "Petits et rusés, rapides et souvent imprévisibles au combat."
     }

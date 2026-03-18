@@ -11,6 +11,9 @@ const Race = sequelize.define('Race', {
         type: DataTypes.STRING,
         unique: true,
     },
+    iconUrl: {
+        type: DataTypes.STRING,
+    },
     imageUrl: {
         type: DataTypes.STRING,
     },

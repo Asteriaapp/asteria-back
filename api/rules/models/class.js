@@ -11,6 +11,9 @@ const Class = sequelize.define('Class', {
         type: DataTypes.STRING,
         unique: true,
     },
+    iconUrl: {
+        type: DataTypes.STRING,
+    },
     imageUrl: {
         type: DataTypes.STRING,
     },
