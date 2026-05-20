@@ -11,6 +11,15 @@ const Class = sequelize.define('Class', {
         type: DataTypes.STRING,
         unique: true,
     },
+    nickname: {
+        type: DataTypes.STRING,
+    },
+    role: {
+        type: DataTypes.STRING,
+    },
+    recommendedRaces: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
+    },
     iconUrl: {
         type: DataTypes.STRING,
     },
@@ -18,7 +27,7 @@ const Class = sequelize.define('Class', {
         type: DataTypes.STRING,
     },
     description: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
     }
 });
 
