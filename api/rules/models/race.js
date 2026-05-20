@@ -11,6 +11,15 @@ const Race = sequelize.define('Race', {
         type: DataTypes.STRING,
         unique: true,
     },
+    nickname: {
+        type: DataTypes.STRING,
+    },
+    archetype: {
+        type: DataTypes.STRING,
+    },
+    recommendedClasses: {
+        type: DataTypes.ARRAY(DataTypes.STRING),
+    },
     iconUrl: {
         type: DataTypes.STRING,
     },
@@ -18,7 +27,7 @@ const Race = sequelize.define('Race', {
         type: DataTypes.STRING,
     },
     description: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
     }
 });
 

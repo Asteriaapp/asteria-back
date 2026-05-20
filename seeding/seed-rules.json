@@ -2,66 +2,207 @@
   "classes": [
     {
       "name": "Guerrier",
-      "iconUrl": "/img/class/warrior-icon.png",
-      "imageUrl": "/img/class/warrior.png",
-      "description": "Un combattant robuste spécialisé dans les armes lourdes et le combat rapproché."
-    },
-    {
-      "name": "Mage",
-      "iconUrl": "/img/class/mage-icon.png",
-      "imageUrl": "/img/class/mage.png",
-      "description": "Maître des sorts et manipulateur d'énergie magique, capable d'infliger de lourds dégâts à distance."
-    },
-    {
-      "name": "Voleur",
-      "iconUrl": "/img/class/rogue-icon.png",
-      "imageUrl": "/img/class/rogue.png",
-      "description": "Expert en furtivité et attaques rapides, idéal pour surprendre ses ennemis."
+      "nickname": "Le combattant physique",
+      "description": "Le Guerrier est la classe de combat par excellence. Maîtrisant les armes et le corps à corps, il excelle dans les affrontements directs. Sa force brute et sa bonne armure en font un choix solide pour les joueurs aimant la confrontation frontale.",
+      "stats": {
+        "pv": 4,
+        "armure": 1,
+        "force": 2,
+        "agilite": 1,
+        "intelligence": -1,
+        "total_points": 5
+      },
+      "role": "DPS Physique",
+      "recommendedRaces": ["Nain", "Dragonoïde", "Humain"],
+      "iconUrl": "classes/guerrier-icon.webp",
+      "imageUrl": "classes/guerrier.webp"
     },
     {
       "name": "Paladin",
-      "iconUrl": "/img/class/paladin-icon.png",
-      "imageUrl": "/img/class/paladin.png",
-      "description": "Combattant sacré, alliant force physique et magie divine pour protéger ses alliés."
+      "nickname": "Le tank magique",
+      "description": "Le Paladin est un guerrier sacré, protégé par une armure divine et des pouvoirs lumineux. C'est le défenseur idéal pour protéger ses alliés et absorber les dégâts les plus violents. Sa haute constitution compense sa faible mobilité.",
+      "stats": {
+        "pv": 8,
+        "armure": 2,
+        "force": 0,
+        "agilite": -1,
+        "intelligence": 0,
+        "total_points": 5
+      },
+      "role": "Tank",
+      "recommendedRaces": ["Humain", "Nain"],
+      "iconUrl": "classes/paladin-icon.webp",
+      "imageUrl": "classes/paladin.webp"
     },
     {
-      "name": "Archer",
-      "iconUrl": "/img/class/archer-icon.png",
-      "imageUrl": "/img/class/archer.png",
-      "description": "Spécialiste du tir à distance et de la précision, capable de frapper ses ennemis avant qu'ils n'approchent."
+      "name": "Barde",
+      "nickname": "Le support",
+      "description": "Le Barde est un artiste combattant qui utilise la musique et la poésie pour soutenir ses alliés. Agile et intelligent, il peut se déplacer rapidement sur le champ de bataille tout en fournissant un soutien tactique précieux.",
+      "stats": {
+        "pv": 0,
+        "armure": 0,
+        "force": 0,
+        "agilite": 2,
+        "intelligence": 3,
+        "total_points": 5
+      },
+      "role": "Support",
+      "recommendedRaces": ["Elfe", "Thérianthrope", "Humain"],
+      "iconUrl": "classes/barde-icon.webp",
+      "imageUrl": "classes/barde.webp"
+    },
+    {
+      "name": "Druide",
+      "nickname": "Le soigneur",
+      "description": "Le Druide puise sa puissance dans les forces de la nature. Soigneur et protecteur, il peut régénérer ses alliés et invoquer des esprits pour l'aider au combat. Fragile physiquement, il doit rester en retrait pour être efficace.",
+      "stats": {
+        "pv": 6,
+        "armure": -1,
+        "force": -1,
+        "agilite": 0,
+        "intelligence": 4,
+        "total_points": 5
+      },
+      "role": "Soigneur",
+      "recommendedRaces": ["Elfe", "Humain"],
+      "iconUrl": "classes/druide-icon.webp",
+      "imageUrl": "classes/druide.webp"
+    },
+    {
+      "name": "Mage",
+      "nickname": "Le destructeur magique",
+      "description": "Le Mage maîtrise les éléments déchaînés : feu, air, terre et eau. Capable d'infliger des dégâts dévastateurs à distance, il reste extrêmement fragile au corps à corps. Un positionnement intelligent est la clé de sa survie.",
+      "stats": {
+        "pv": 2,
+        "armure": 0,
+        "force": -1,
+        "agilite": 0,
+        "intelligence": 5,
+        "total_points": 5
+      },
+      "role": "DPS Magique",
+      "recommendedRaces": ["Elfe", "Humain"],
+      "iconUrl": "classes/mage-icon.webp",
+      "imageUrl": "classes/mage.webp"
+    },
+    {
+      "name": "Moine",
+      "nickname": "Le combattant agile",
+      "description": "Le Moine est un artiste martial qui combine force et agilité dans un style de combat fluide et rapide. Sans armure pour le ralentir, il se déplace comme l'éclair et frappe avec une précision chirurgicale.",
+      "stats": {
+        "pv": 4,
+        "armure": -1,
+        "force": 2,
+        "agilite": 2,
+        "intelligence": 0,
+        "total_points": 5
+      },
+      "role": "DPS Agile",
+      "recommendedRaces": ["Thérianthrope", "Dragonoïde", "Humain"],
+      "iconUrl": "classes/moine-icon.webp",
+      "imageUrl": "classes/moine.webp"
     }
   ],
-
   "races": [
     {
       "name": "Humain",
-      "iconUrl": "/img/race/human-icon.png",
-      "imageUrl": "/img/race/human.png",
-      "description": "Une race polyvalente, capable de s'adapter à toutes les situations et styles de combat."
+      "nickname": "Les bâtisseurs du Nord",
+      "origins": {
+        "region": "Nord du continent",
+        "capital": "Draveil"
+      },
+      "description": "Les Humains sont la race la plus répandue et adaptable d'Asteria. Établis dans les terres froides du Nord continental, ils ont bâti Draveil, une capitale fortifiée servant de carrefour commercial et culturel. Leur force réside dans leur capacité à s'adapter à toutes les situations et à maîtriser tous les arts.",
+      "stats": {
+        "pv": 10,
+        "force": 5,
+        "agilite": 5,
+        "intelligence": 5,
+        "total_points": 20
+      },
+      "archetype": "Équilibré / Couteau suisse",
+      "recommendedClasses": ["Paladin", "Guerrier", "Druide", "Mage", "Barde", "Moine"],
+      "iconUrl": "races/humain-icon.webp",
+      "imageUrl": "races/humain.webp"
     },
     {
       "name": "Elfe",
-      "iconUrl": "/img/race/elf-icon.png",
-      "imageUrl": "/img/race/elf.png",
-      "description": "Agile et élégant, fortement lié à la magie et à la nature."
-    },
-    {
-      "name": "Orc",
-      "iconUrl": "/img/race/orc-icon.png",
-      "imageUrl": "/img/race/orc.png",
-      "description": "Puissants et résistants, souvent spécialisés dans le combat rapproché."
+      "nickname": "Gardiens de l'Arbre Monde",
+      "origins": {
+        "region": "Forêt gigantesque",
+        "capital": null
+      },
+      "description": "Les Elfes vivent en harmonie avec la forêt ancestrale d'Asteria, centrée autour de l'Arbre Monde, une entité végétale millénaire. Fragiles physiquement mais dotés d'une intelligence et d'une agilité exceptionnelles, ils sont les gardiens des anciens savoirs et des magies naturelles.",
+      "stats": {
+        "pv": 8,
+        "force": 2,
+        "agilite": 6,
+        "intelligence": 8,
+        "total_points": 20
+      },
+      "archetype": "Mage / Rogue",
+      "recommendedClasses": ["Mage", "Druide", "Barde"],
+      "iconUrl": "races/elfe-icon.webp",
+      "imageUrl": "races/elfe.webp"
     },
     {
       "name": "Nain",
-      "iconUrl": "/img/race/dwarf-icon.png",
-      "imageUrl": "/img/race/dwarf.png",
-      "description": "Petits mais robustes, excellents artisans et guerriers défensifs."
+      "nickname": "Survivants des terres gelées",
+      "origins": {
+        "region": "Pays de glace",
+        "capital": "Moldavea"
+      },
+      "description": "Les Nains ont colonisé les terres glacées du nord où peu osent s'aventurer. Leur constitution exceptionnelle leur permet de survivre aux conditions les plus extrêmes. Bien que lents et peu portés sur la magie, leur endurance et leur force brute en font des adversaires redoutables.",
+      "stats": {
+        "pv": 20,
+        "force": 5,
+        "agilite": 2,
+        "intelligence": 3,
+        "total_points": 20
+      },
+      "archetype": "Tank",
+      "recommendedClasses": ["Guerrier", "Paladin"],
+      "iconUrl": "races/nain-icon.webp",
+      "imageUrl": "races/nain.webp"
     },
     {
-      "name": "Gobelin",
-      "iconUrl": "/img/race/goblin-icon.png",
-      "imageUrl": "/img/race/goblin.png",
-      "description": "Petits et rusés, rapides et souvent imprévisibles au combat."
+      "name": "Dragonoïde",
+      "nickname": "Seigneurs des pics glacés",
+      "origins": {
+        "region": "Pays de glace",
+        "capital": "Filetdor"
+      },
+      "description": "Les Dragonoïdes sont une race imposante, dotée d'une force physique hors norme. Originaires des mêmes terres hostiles que les Nains, ils ont développé une puissance musculaire exceptionnelle au détriment de leurs capacités magiques. Leur présence au combat inspire crainte et respect.",
+      "stats": {
+        "pv": 12,
+        "force": 9,
+        "agilite": 3,
+        "intelligence": 2,
+        "total_points": 20
+      },
+      "archetype": "Guerrier pur",
+      "recommendedClasses": ["Guerrier", "Moine"],
+      "iconUrl": "races/dragonoide-icon.webp",
+      "imageUrl": "races/dragonoide.webp"
+    },
+    {
+      "name": "Thérianthrope",
+      "nickname": "Nomades des sables",
+      "origins": {
+        "region": "Île désert/savane (sud)",
+        "capital": "Xihé"
+      },
+      "description": "Les Thérianthropes sont des créatures hybrides, mi-humaines mi-animales, ayant colonisé l'île désertique au sud d'Asteria. Leur agilité naturelle est inégalée, leur permettant de se déplacer avec une grâce et une rapidité déconcertantes. Ils vivent en harmonie avec la nature sauvage de leur île.",
+      "stats": {
+        "pv": 10,
+        "force": 3,
+        "agilite": 9,
+        "intelligence": 3,
+        "total_points": 20
+      },
+      "archetype": "Rogue / Assassin",
+      "recommendedClasses": ["Barde", "Moine", "Guerrier"],
+      "iconUrl": "races/therianthrope-icon.webp",
+      "imageUrl": "races/therianthrope.webp"
     }
   ]
 }
